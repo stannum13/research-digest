@@ -1,0 +1,54 @@
+previews:
+  generation: "off"
+
+services:
+  - type: web
+    name: marginalia-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: "off"
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:////tmp/digest.db
+      - key: CORS_ORIGINS
+        value: https://marginalia-web.onrender.com
+      - key: CORS_ORIGIN_REGEX
+        value: ""
+      - key: ARXIV_MAX_RESULTS_PER_CATEGORY
+        value: "20"
+      - key: TOP_N
+        value: "8"
+      - key: FULL_TEXT_TOP_K
+        value: "3"
+      - key: ENABLE_SCHEDULER
+        value: "false"
+      - key: SEED_ON_EMPTY
+        value: "true"
+      - key: LLM_PROVIDER
+        value: zai
+      - key: ZAI_SYNTHESIS_MODEL
+        value: glm-5.2
+      - key: ZAI_CLASSIFIER_MODEL
+        value: glm-4.7-flashx
+      - key: LLM_RUN_BUDGET_USD
+        value: "0.25"
+      - key: LOG_LEVEL
+        value: info
+
+  - type: web
+    name: marginalia-web
+    runtime: static
+    plan: free
+    buildCommand: cd frontend && npm ci && npm run build
+    staticPublishPath: frontend/dist
+    autoDeployTrigger: "off"
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: https://marginalia-api.onrender.com
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

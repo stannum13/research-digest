@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="220" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">E001 smoke status</title>
+  <desc id="desc">Adapter smoke passed; canonical PaperQA2 quality evaluation has not run.</desc>
+  <rect width="760" height="220" fill="#fffaf3"/>
+  <rect x="32" y="32" width="696" height="156" fill="#f0e7db" stroke="#c8b8a8"/>
+  <text x="56" y="82" font-family="monospace" font-size="20" fill="#2f2a25">E001 smoke: adapter_smoke_passed</text>
+  <text x="56" y="122" font-family="monospace" font-size="15" fill="#5f564e">Records checked: 1 Marginalia paper document</text>
+  <text x="56" y="152" font-family="monospace" font-size="15" fill="#8a4f43">Canonical PaperQA2 quality result: not run</text>
+</svg>

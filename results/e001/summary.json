@@ -1,0 +1,15 @@
+{
+  "canonical_quality_result": false,
+  "estimated_cost_usd": 0.0,
+  "experiment_id": "e001",
+  "mode": "smoke",
+  "notes": [
+    "Smoke output validates Marginalia-to-PaperQA2 document shaping only.",
+    "It is not a PaperQA2 answer-quality or citation-support result."
+  ],
+  "official_answer_quality": null,
+  "official_citation_support": null,
+  "paperqa2_importable": false,
+  "records_checked": 1,
+  "status": "adapter_smoke_passed"
+}

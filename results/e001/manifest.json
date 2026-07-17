@@ -1,0 +1,39 @@
+{
+  "artifacts": {
+    "figure_svg": "results/e001/figure.svg",
+    "summary_csv": "results/e001/summary.csv",
+    "summary_json": "results/e001/summary.json"
+  },
+  "config_path": "experiments/e001/configs/smoke.json",
+  "config_sha256": "dc305a4fe6b5cee6ebcfe71c9c3d2fa66aa315e92640d7d4d735b5f4b876b74f",
+  "generated_at": "2026-07-17T06:26:37.997791+00:00",
+  "smoke_record": {
+    "citation": "Marginalia Fixture (2026). Budget-Aware Scientific Retrieval Smoke Fixture. arXiv:2607.00001.",
+    "docname": "arxiv:2607.00001",
+    "metadata": {
+      "arxiv_id": "2607.00001",
+      "arxiv_url": "https://arxiv.org/abs/2607.00001",
+      "arxiv_version": "v1",
+      "authors": [
+        "Marginalia Fixture"
+      ],
+      "categories": [
+        "cs.IR"
+      ],
+      "citation": "Marginalia Fixture (2026). Budget-Aware Scientific Retrieval Smoke Fixture. arXiv:2607.00001.",
+      "has_marginalia_summary": false,
+      "pdf_url": "https://arxiv.org/pdf/2607.00001",
+      "primary_category": "cs.IR",
+      "published_at": "2026-07-17T00:00:00+00:00",
+      "source_kind": "marginalia_paper",
+      "title": "Budget-Aware Scientific Retrieval Smoke Fixture",
+      "updated_at": "2026-07-17T00:00:00+00:00"
+    },
+    "text_sha256": "b79af71b26c097d4725559f9f3cafb4e54a77224db0fcf8dd287887dd6a5e73e"
+  },
+  "upstream": {
+    "commit": "d7675d7b7eddeb3535e8c260399c5bbeeb818c50",
+    "package": "paper-qa==2026.3.18",
+    "repository": "https://github.com/Future-House/paper-qa"
+  }
+}

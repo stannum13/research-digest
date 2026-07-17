@@ -1,0 +1,2 @@
+experiment_id,mode,status,canonical_quality_result,paperqa2_importable,records_checked,estimated_cost_usd
+e001,smoke,adapter_smoke_passed,False,False,1,0.0

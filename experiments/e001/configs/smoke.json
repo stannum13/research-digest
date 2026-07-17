@@ -1,0 +1,24 @@
+{
+  "experiment_id": "e001",
+  "mode": "smoke",
+  "description": "Validate Marginalia-to-PaperQA2 document shaping and artifact generation without running PaperQA2 answer-quality evaluation.",
+  "upstream": {
+    "repository": "https://github.com/Future-House/paper-qa",
+    "commit": "d7675d7b7eddeb3535e8c260399c5bbeeb818c50",
+    "package": "paper-qa==2026.3.18"
+  },
+  "seed": 17,
+  "tasks": [
+    {
+      "name": "adapter_contract",
+      "records": 1,
+      "requires_provider_key": false
+    }
+  ],
+  "expected_artifacts": [
+    "results/e001/manifest.json",
+    "results/e001/summary.json",
+    "results/e001/summary.csv",
+    "results/e001/figure.svg"
+  ]
+}

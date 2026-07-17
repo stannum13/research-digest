@@ -1,0 +1,41 @@
+{
+  "experiment_id": "e001",
+  "mode": "canonical",
+  "enabled": false,
+  "blocked_reason": "Official PaperQA2 evaluation task, model credentials, and run budget have not been selected in this repository.",
+  "upstream": {
+    "repository": "https://github.com/Future-House/paper-qa",
+    "commit": "d7675d7b7eddeb3535e8c260399c5bbeeb818c50",
+    "package": "paper-qa==2026.3.18"
+  },
+  "seed": 17,
+  "question_set": "official PaperQA2 evaluation tasks or another source-backed scientific QA set with exact citations",
+  "baselines": [
+    "default_paperqa2",
+    "fixed_top_k_budget_sweep",
+    "large_model_rerank_no_adaptive_stopping"
+  ],
+  "treatment": "small_reranker_with_adaptive_evidence_stopping",
+  "controls": [
+    "small_reranker_only",
+    "adaptive_stopping_default_reranker",
+    "randomly_truncated_evidence",
+    "abstract_only_vs_full_text"
+  ],
+  "metrics": [
+    "official_answer_quality",
+    "official_citation_support",
+    "retrieval_calls",
+    "tokens",
+    "latency_ms",
+    "estimated_cost_usd",
+    "evidence_redundancy",
+    "source_diversity",
+    "failure_rate_by_full_text_availability"
+  ],
+  "promotion_rule": {
+    "cost_reduction_required": "material",
+    "quality_tolerance": "declare before run",
+    "citation_support_tolerance": "declare before run"
+  }
+}
